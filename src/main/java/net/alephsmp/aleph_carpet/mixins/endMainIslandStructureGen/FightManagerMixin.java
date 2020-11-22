@@ -1,4 +1,4 @@
-package net.alephsmp.aleph_carpet.mixins;
+package net.alephsmp.aleph_carpet.mixins.endMainIslandStructureGen;
 
 import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.entity.boss.ServerBossBar;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import static net.minecraft.entity.boss.dragon.EnderDragonSpawnState.SUMMONING_DRAGON;
 
 @Mixin(EnderDragonFight.class)
-public abstract class FightManager_structureGeneration {
+public abstract class FightManagerMixin {
 
     @Shadow private EnderDragonSpawnState dragonSpawnState;
     @Shadow private ServerBossBar bossBar;

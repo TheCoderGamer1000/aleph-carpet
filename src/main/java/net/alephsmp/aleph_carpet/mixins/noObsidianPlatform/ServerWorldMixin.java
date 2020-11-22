@@ -1,4 +1,4 @@
-package net.alephsmp.aleph_carpet.mixins;
+package net.alephsmp.aleph_carpet.mixins.noObsidianPlatform;
 
 import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.server.world.ServerWorld;
@@ -15,9 +15,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.function.Supplier;
 
 @Mixin(ServerWorld.class)
-public abstract class ServerWorld_noObsidianPlatformMixin extends World {
+public abstract class ServerWorldMixin extends World {
 
-    protected ServerWorld_noObsidianPlatformMixin(MutableWorldProperties properties, RegistryKey<World> registryRef, DimensionType dimensionType, Supplier<Profiler> profiler, boolean isClient, boolean debugWorld, long seed) {
+    protected ServerWorldMixin(MutableWorldProperties properties, RegistryKey<World> registryRef, DimensionType dimensionType, Supplier<Profiler> profiler, boolean isClient, boolean debugWorld, long seed) {
         super(properties, registryRef, dimensionType, profiler, isClient, debugWorld, seed);
     }
 
