@@ -3,8 +3,8 @@
   "package": "net.alephsmp.aleph_carpet.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "EndGateway_noCooldownMixin",
-    "EndGatewayBlockEntity_noCooldownMixin",
+    "noCooldown.EndGateway",
+    "noCooldown.EndGatewayBlockEntityMixin",
     "EndSpikeFeature_generationMixin",
     "FightManager_structureGeneration",
     "MinecraftClient_noopMixin",
