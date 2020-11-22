@@ -1,6 +1,6 @@
-package com.fractalsmp.fractal_carpet_addon.mixins;
+package net.alephsmp.aleph_carpet.mixins;
 
-import com.fractalsmp.fractal_carpet_addon.FractalSimpleSettings;
+import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.profiler.Profiler;
 import net.minecraft.util.registry.RegistryKey;
@@ -23,7 +23,7 @@ public abstract class ServerWorld_noObsidianPlatformMixin extends World {
 
     @Inject(method="createEndSpawnPlatform", at = @At("HEAD"), cancellable = true)
     private static void cancelEndPlatformCreate(ServerWorld world, CallbackInfo ci) {
-        if (FractalSimpleSettings.noObsidianPlatform) {
+        if (AlephSimpleSettings.noObsidianPlatform) {
             ci.cancel();
         }
     }
