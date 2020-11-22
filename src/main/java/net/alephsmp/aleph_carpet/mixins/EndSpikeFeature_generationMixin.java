@@ -1,6 +1,6 @@
-package com.fractalsmp.fractal_carpet_addon.mixins;
+package net.alephsmp.aleph_carpet.mixins;
 
-import com.fractalsmp.fractal_carpet_addon.FractalSimpleSettings;
+import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import com.mojang.serialization.Codec;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.ServerWorldAccess;
@@ -25,14 +25,14 @@ public abstract class EndSpikeFeature_generationMixin extends Feature<EndSpikeFe
 
     @Inject(method="generate", at = @At("HEAD"), cancellable = true)
     public void suppressGenerate(StructureWorldAccess structureWorldAccess, ChunkGenerator chunkGenerator, Random random, BlockPos blockPos, EndSpikeFeatureConfig endSpikeFeatureConfig, CallbackInfoReturnable<Boolean> cir) {
-        if (!FractalSimpleSettings.endMainIslandStructureGen) {
+        if (!AlephSimpleSettings.endMainIslandStructureGen) {
             cir.setReturnValue(true);
         }
     }
 
     @Inject(method="generateSpike", at=@At("HEAD"), cancellable = true)
     public void suppressGenerateSpike(ServerWorldAccess world, Random random, EndSpikeFeatureConfig config, EndSpikeFeature.Spike spike, CallbackInfo ci) {
-        if (!FractalSimpleSettings.endMainIslandStructureGen) {
+        if (!AlephSimpleSettings.endMainIslandStructureGen) {
             ci.cancel();
         }
     }

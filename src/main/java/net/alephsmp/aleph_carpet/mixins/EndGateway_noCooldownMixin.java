@@ -1,6 +1,6 @@
-package com.fractalsmp.fractal_carpet_addon.mixins;
+package net.alephsmp.aleph_carpet.mixins;
 
-import com.fractalsmp.fractal_carpet_addon.FractalSimpleSettings;
+import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.block.entity.EndGatewayBlockEntity;
 import net.minecraft.block.entity.EndPortalBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class EndGateway_noCooldownMixin extends EndPortalBlockEntity {
     @Inject(method="needsCooldownBeforeTeleporting", at=@At("RETURN"), cancellable = true)
     private void suppressCooldown(CallbackInfoReturnable<Boolean> cir) {
-        if (!FractalSimpleSettings.endGatewayCooldown) {
+        if (!AlephSimpleSettings.endGatewayCooldown) {
             cir.setReturnValue(false);// Returns target method early
         }
     }

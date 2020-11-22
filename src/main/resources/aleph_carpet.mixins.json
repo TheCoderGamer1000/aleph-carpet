@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.fractalsmp.fractal_carpet_addon.mixins",
+  "package": "net.alephsmp.aleph_carpet.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "EndGateway_noCooldownMixin",

@@ -1,6 +1,6 @@
-package com.fractalsmp.fractal_carpet_addon.mixins;
+package net.alephsmp.aleph_carpet.mixins;
 
-import com.fractalsmp.fractal_carpet_addon.FractalSimpleSettings;
+import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
 import net.minecraft.entity.boss.dragon.EnderDragonSpawnState;
@@ -10,8 +10,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.List;
 
 import static net.minecraft.entity.boss.dragon.EnderDragonSpawnState.SUMMONING_DRAGON;
 
@@ -26,7 +24,7 @@ public abstract class FightManager_structureGeneration {
 
     @Inject(method="tick", at=@At("HEAD"))
     public void suppressTowerExplosionAndBlockDeletion(CallbackInfo ci) {
-        if (!FractalSimpleSettings.endMainIslandStructureGen
+        if (!AlephSimpleSettings.endMainIslandStructureGen
             && !this.bossBar.getPlayers().isEmpty()
             && this.dragonSpawnState != null
             && this.dragonSpawnState == EnderDragonSpawnState.SUMMONING_PILLARS) {
@@ -46,7 +44,7 @@ public abstract class FightManager_structureGeneration {
     }
 
     private void cancelIfFeatureFalse(CallbackInfo ci) {
-        if (!FractalSimpleSettings.endMainIslandStructureGen) {
+        if (!AlephSimpleSettings.endMainIslandStructureGen) {
             ci.cancel();
         }
     }

@@ -1,6 +1,6 @@
-package com.fractalsmp.fractal_carpet_addon.mixins;
+package net.alephsmp.aleph_carpet.mixins;
 
-import com.fractalsmp.fractal_carpet_addon.FractalSimpleSettings;
+import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.block.entity.EndGatewayBlockEntity;
 import net.minecraft.block.entity.EndPortalBlockEntity;
 import net.minecraft.entity.Entity;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class EndGatewayBlockEntity_noCooldownMixin extends EndPortalBlockEntity {
     @Redirect(method="method_30276", at=@At(value="INVOKE", target="Lnet/minecraft/entity/Entity;hasNetherPortalCooldown()Z"))
     private static boolean returnFalseIfNoCooldown(Entity entity) {
-        if (!FractalSimpleSettings.endGatewayCooldown) {
+        if (!AlephSimpleSettings.endGatewayCooldown) {
             return false;
         } else {
             return entity.hasNetherPortalCooldown();
