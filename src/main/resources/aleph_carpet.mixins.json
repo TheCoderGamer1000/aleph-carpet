@@ -3,13 +3,13 @@
   "package": "net.alephsmp.aleph_carpet.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "noCooldown.EndGateway",
+    "noCooldown.EndGatewayMixin",
     "noCooldown.EndGatewayBlockEntityMixin",
-    "EndSpikeFeature_generationMixin",
-    "FightManager_structureGeneration",
-    "MinecraftClient_noopMixin",
-    "MinecraftServer_noopMixin",
-    "ServerWorld_noObsidianPlatformMixin"
+    "endMainIslandStructureGen.EndSpikeFeatureMixin",
+    "endMainIslandStructureGen.FightManagerMixin",
+    "noop.MinecraftClientMixin",
+    "noop.MinecraftServerMixin",
+    "noObsidianPlatform.ServerWorldMixin"
   ],
   "client": [
   ],
