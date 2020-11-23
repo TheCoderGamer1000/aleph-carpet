@@ -1,4 +1,4 @@
-package net.alephsmp.aleph_carpet.mixins;
+package net.alephsmp.aleph_carpet.mixins.endMainIslandStructureGen;
 
 import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import com.mojang.serialization.Codec;
@@ -18,8 +18,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Random;
 
 @Mixin(EndSpikeFeature.class)
-public abstract class EndSpikeFeature_generationMixin extends Feature<EndSpikeFeatureConfig> {
-    public EndSpikeFeature_generationMixin(Codec<EndSpikeFeatureConfig> configCodec) {
+public abstract class EndSpikeFeatureMixin extends Feature<EndSpikeFeatureConfig> {
+    public EndSpikeFeatureMixin(Codec<EndSpikeFeatureConfig> configCodec) {
         super(configCodec);
     }
 
