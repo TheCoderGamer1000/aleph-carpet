@@ -6,7 +6,7 @@ This is a fork of FractalCarpetAddon. When Aleph changed from 1.15 to 1.16 it al
 - no obsidian platform generation rule
 - no end spikes, portal, crystal, egg or gateway generation rule
 - no end gateway cooldown rule
-- Keep Proyectiles Ticked In Unloaded Chunks
+- Keep Projectiles Ticked In Unloaded Chunks
 ## Features in Development
 - Experimental ender pearl ticking for cannons 
 ## 1.16 Roadmap
