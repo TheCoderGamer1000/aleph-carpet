@@ -6,12 +6,12 @@ This is a fork of FractalCarpetAddon. When Aleph changed from 1.15 to 1.16 it al
 - no obsidian platform generation rule
 - no end spikes, portal, crystal, egg or gateway generation rule
 - no end gateway cooldown rule
+- Keep Proyectiles Ticked In Unloaded Chunks
 ## Features in Development
 - Experimental ender pearl ticking for cannons 
 ## 1.16 Roadmap
 -   ✓ NoGatewayCoolDown
 -   ✓ NoRegenationObsidianPlatform with entities
--   KeepEnderpearlsTickedInUnloadedChunks // I have the feature code for 1.16 we only need to implement it in FractalCarpet [](https://github.com/whoImT/carpet-addons)[https://github.com/whoImT/carpet-addons](https://github.com/whoImT/carpet-addons)
 -   CarefulBreak // I have the feature code for 1.16 we only need to implement it in FractalCarpet
 -   ✓ /cs // AUTOLOAD THIS MOTHERFUCKER IT'S SCARPET BITCHES YEEHAW
 -   StackeableShulkerBoxesInInventories // But not when shulkers get into a hopper from a chest or dispensers or droppers
