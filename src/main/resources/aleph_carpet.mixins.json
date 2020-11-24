@@ -10,7 +10,7 @@
     "noop.MinecraftClientMixin",
     "noop.MinecraftServerMixin",
     "noObsidianPlatform.ServerWorldMixin",
-    "ServerChunkManagerMinix"
+    "keepProjectilesTicked.ServerChunkManagerMixin"
   ],
   "client": [
   ],

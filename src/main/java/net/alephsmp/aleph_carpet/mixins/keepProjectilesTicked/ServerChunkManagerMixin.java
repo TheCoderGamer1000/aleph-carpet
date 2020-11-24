@@ -1,4 +1,4 @@
-package net.alephsmp.aleph_carpet.mixins;
+package net.alephsmp.aleph_carpet.mixins.keepProjectilesTicked;
 
 import net.alephsmp.aleph_carpet.AlephSimpleSettings;
 import net.minecraft.entity.Entity;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 // This code was adapted from https://github.com/whoImT/carpet-addons
 
 @Mixin(ServerChunkManager.class)
-public class ServerChunkManagerMinix {
+public class ServerChunkManagerMixin {
     @Inject(method = "shouldTickEntity", at = @At(value = "HEAD"), cancellable =  true)
     private void onShouldTickEntity(Entity entity, CallbackInfoReturnable<Boolean> cir){
         if(AlephSimpleSettings.keepProjectilesTicked && entity instanceof ProjectileEntity)
